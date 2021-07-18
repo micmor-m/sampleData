@@ -8,8 +8,8 @@
   font-size: 14px;
   border-width: 1px;
   border-style: solid;
-  border-color: $blue;
-  color: $blue;
+  border-color: $view-btn-color;
+  color: $view-btn-color;
   background-color: transparent;
   font-family: $primary-font;
 }
@@ -18,17 +18,17 @@
   @include button-active;
 
   color: $white;
-  background-color: $blue;
+  background-color: $view-btn-color;
 }
 
 .button--danger {
-  color: $danger-color;
-  border-color: $danger-color;
+  color: $remove-btn-color;
+  border-color: $remove-btn-color;
 }
 
 .button--danger:hover {
   color: $white;
-  background-color: $danger-color;
+  background-color: $remove-btn-color;
 }
 
 .button:focus {
