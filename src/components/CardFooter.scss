@@ -1,0 +1,13 @@
+@import "styles/variables.scss";
+
+.card-footer {
+  font-family: $primary-font;
+  display: flex;
+  background-color: $card-footer-bg;
+}
+
+.card-footer p {
+  font-size: 10px;
+  color: $card-subtext;
+  margin-right: 5px;
+}

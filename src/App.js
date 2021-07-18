@@ -1,6 +1,7 @@
 import ButtonGroup from "./components/ButtonGroup";
 import CardHeader from "./components/CardHeader";
 import CardBody from "components/CardBody";
+import CardFooter from "components/CardFooter";
 import "./styles/variables.scss";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <CardHeader>Automated Origin</CardHeader>
         <CardHeader manual>Manual Origin</CardHeader>
         <CardBody title={"Skill Name"} subTitle={"42 Intents"} />
+        <CardFooter timestamp={"Jan 23, 2021 @ 4:32am"} />
       </div>
     </main>
   );
