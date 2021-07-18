@@ -1,3 +1,5 @@
+# Refer to provided document for assignment instructions! 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
