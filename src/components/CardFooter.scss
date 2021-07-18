@@ -4,7 +4,10 @@
   font-family: $primary-font;
   display: flex;
   background-color: $card-footer-bg;
-  padding: 10px 0;
+  padding: 10px 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  border-radius: 0 0 5px 5px;
 }
 
 .card-footer p {
