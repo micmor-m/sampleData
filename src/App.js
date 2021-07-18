@@ -1,4 +1,5 @@
 import ButtonGroup from "./components/ButtonGroup";
+import CardHeader from "./components/CardHeader";
 import "./styles/variables.scss";
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
         Replace me with a responsive container component to hold the group of
         cards!
         <ButtonGroup />
+        <CardHeader>Automated Origin</CardHeader>
+        <CardHeader manual>Manual Origin</CardHeader>
       </div>
     </main>
   );

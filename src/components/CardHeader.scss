@@ -1,0 +1,16 @@
+@import "styles/variables.scss";
+
+.card-header {
+  font-size: 14px;
+  font-family: $primary-font;
+  color: $automated-origin-text;
+  display: flex;
+}
+
+.card-header--manual {
+  color: $manual-origin-text;
+}
+
+.card-header img {
+  margin-right: 5px;
+}
