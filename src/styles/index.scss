@@ -28,7 +28,13 @@ body {
 }
 
 @import "styles/variables.scss";
+@import "styles/reset.scss";
 
 * {
   box-sizing: border-box;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
 }
