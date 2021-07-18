@@ -1,5 +1,6 @@
 import ButtonGroup from "./components/ButtonGroup";
 import CardHeader from "./components/CardHeader";
+import CardBody from "components/CardBody";
 import "./styles/variables.scss";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <ButtonGroup />
         <CardHeader>Automated Origin</CardHeader>
         <CardHeader manual>Manual Origin</CardHeader>
+        <CardBody title={"Skill Name"} subTitle={"42 Intents"} />
       </div>
     </main>
   );

@@ -1,0 +1,18 @@
+@import "styles/variables.scss";
+
+.card-body {
+  font-family: $primary-font;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body h1 {
+  font-size: 18px;
+  color: $card-title-text;
+  margin-bottom: 5px;
+}
+
+.card-body p {
+  font-size: 14px;
+  color: $card-subtext;
+}
