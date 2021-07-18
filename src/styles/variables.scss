@@ -1,28 +1,31 @@
-// body {
-//   --remove-btn-color: #dc2c00;
-//   --view-btn-color: #0045ca;
-//   --automated-origin-text: #00b287;
-//   --manual-origin-text: #8738c5;
-//   --card-footer-bg: #f8fafe;
-//   --card-body-bg: #fff;
-//   --card-title-text: #07114b;
-//   /* footer and body subtext */
-//   --card-subtext: #6b747f;
-//   --primary-font: "Averta";
-// }
+body {
+  --remove-btn-color: #dc2c00;
+  --view-btn-color: #0045ca;
+  --automated-origin-text: #00b287;
+  --manual-origin-text: #8738c5;
+  --card-footer-bg: #f8fafe;
+  --card-body-bg: #fff;
+  --card-title-text: #07114b;
+  /* footer and body subtext */
+  --card-subtext: #6b747f;
+  --primary-font: "Averta";
+}
+
+$blue: #0045ca;
+$danger-color: #dc2c00;
+$primary-font: "Averta";
 
 $active-opacity: 1;
 $inactive-opacity: 0.15;
 
 $white: #fff;
 $black: #000;
-$blue: #0045ca;
 
 $dark-background: #222f3e;
 
 $weeks-colors: #54a0ff, #48dbfb, #1dd1a1, #5f27cd;
 $booked-color: #54a0ff;
-$danger-color: #ee5253;
+
 $error-color: #ff9f43;
 $confirm-color: #10ac84;
 

@@ -5,11 +5,13 @@
   border-radius: 29px;
   width: 85px;
   height: 25px;
+  font-size: 14px;
   border-width: 1px;
   border-style: solid;
   border-color: $blue;
   color: $blue;
   background-color: transparent;
+  font-family: $primary-font;
 }
 
 .button:hover {
