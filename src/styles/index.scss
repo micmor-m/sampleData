@@ -26,3 +26,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #eef1f7;
 }
+
+@import "styles/variables.scss";
+
+* {
+  box-sizing: border-box;
+}
