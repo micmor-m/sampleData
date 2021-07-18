@@ -1,7 +1,4 @@
-import ButtonGroup from "./components/ButtonGroup";
-import CardHeader from "./components/CardHeader";
-import CardBody from "components/CardBody";
-import CardFooter from "components/CardFooter";
+import CommonCard from "components/CommonCard";
 import "./styles/variables.scss";
 
 function App() {
@@ -11,11 +8,7 @@ function App() {
       <div>
         Replace me with a responsive container component to hold the group of
         cards!
-        <ButtonGroup />
-        <CardHeader>Automated Origin</CardHeader>
-        <CardHeader manual>Manual Origin</CardHeader>
-        <CardBody title={"Skill Name"} subTitle={"42 Intents"} />
-        <CardFooter timestamp={"Jan 23, 2021 @ 4:32am"} />
+        <CommonCard />
       </div>
     </main>
   );

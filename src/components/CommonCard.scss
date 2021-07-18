@@ -1,0 +1,10 @@
+@import "styles/variables.scss";
+
+.commonCardClass {
+  width: 240px;
+  height: 195px;
+  border-radius: 5px;
+  background-color: $card-body-bg;
+  display: flex;
+  flex-direction: column;
+}

@@ -8,7 +8,7 @@ const CardFooter = (props) => {
 
   return (
     <div className={cardFooterClass}>
-      <p>Last Updated: </p>
+      <p>Last Updated:</p>
       <p> {props.timestamp}</p>
     </div>
   );
