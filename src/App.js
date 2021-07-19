@@ -1,4 +1,6 @@
+import React, { useState } from "react";
 import CommonCard from "components/CommonCard";
+import SearchBox from "components/SearchBox";
 import "./styles/variables.scss";
 import "./styles/container.scss";
 
@@ -9,9 +11,21 @@ import { sampleData } from "data/sampleData";
 import formatTimestamp from "./helpers/formatData.js";
 
 function App() {
+  const [search, setSearch] = useState("");
+
+  const handleSearch = (value) => {
+    setSearch(value);
+  };
+
+  const filteredData = sampleData.filter((item) => {
+    return item.name.toLowerCase().includes(search.toLowerCase());
+  });
+
+  console.log("FilteredData", filteredData);
+
   return (
     <main className="layout">
-      {/* Add Responsive container component here. Render the card components inside of that component.  */}
+      <SearchBox handleSearch={handleSearch} />
       <section className="container">
         {sampleData.map((item) => {
           return (
