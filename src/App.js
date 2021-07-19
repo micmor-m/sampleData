@@ -11,16 +11,6 @@ import { sampleData } from "data/sampleData";
 import formatTimestamp from "./helpers/formatData.js";
 
 function App() {
-  /* OLD VERSION
-  const [search, setSearch] = useState(""); 
-  const handleSearch = (value) => {
-    setSearch(value);
-  };
-  const filteredData = sampleData.filter((item) => {
-    return item.name.toLowerCase().includes(search.toLowerCase());
-  });
-*/
-
   const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
 
