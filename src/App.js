@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CommonCard from "components/CommonCard";
 import SearchBox from "components/SearchBox";
 import "./styles/variables.scss";
@@ -11,6 +11,7 @@ import { sampleData } from "data/sampleData";
 import formatTimestamp from "./helpers/formatData.js";
 
 function App() {
+  /* Old code
   const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
 
@@ -23,12 +24,41 @@ function App() {
 
     setResults([...filteredData]);
   }, [term]);
+*/
+  const [search, setSearch] = useState({
+    term: "",
+    results: [],
+    loading: false,
+  });
+
+  const prev = useRef("");
+
+  useEffect(() => {
+    if (prev.current === "" && search.term === "") return;
+
+    setSearch((prev) => ({
+      ...prev,
+      loading: true,
+    }));
+
+    prev.current = search.term;
+
+    //Filter data array
+    let response;
+    setSearch((search) => ({
+      ...search,
+      results: response.data.results,
+      loading: false,
+    }));
+    // })
+  }, [search.term]);
 
   return (
     <main className="layout">
-      <SearchBox onSearch={(term) => setTerm(term)} />
+      {/* <SearchBox onSearch={(term) => setTerm(term)} /> */}
+      onSearch={(term) => setSearch({ ...search, term })}
       <section className="container">
-        {results.map((item) => {
+        {search.results.map((item) => {
           return (
             <CommonCard
               key={item.id}
