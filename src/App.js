@@ -24,10 +24,8 @@ function App() {
   const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
 
-  console.log("term", term);
-
   useEffect(() => {
-    console.log("Fetching data...");
+    console.log("Filtering data...");
 
     const filteredData = sampleData.filter((item) => {
       return item.name.toLowerCase().includes(term.toLowerCase());
