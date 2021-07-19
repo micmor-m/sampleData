@@ -11,7 +11,6 @@ const CommonCard = (props) => {
   return (
     <article className="commonCardClass">
       <CardHeader originType={props.originType}></CardHeader>
-      {/* <CardHeader manual>Manual Origin</CardHeader> */}
       <CardBody title={props.name} subTitle={props.intents} />
       <ButtonGroup />
       <CardFooter timestamp={props.dateUpdated} />

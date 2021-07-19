@@ -5,6 +5,9 @@ import "./styles/container.scss";
 // Import data
 import { sampleData } from "data/sampleData";
 
+// Import helper function
+import formatTimestamp from "./helpers/formatData.js";
+
 function App() {
   return (
     <main className="layout">
@@ -17,7 +20,7 @@ function App() {
               name={item.name}
               originType={item.originType}
               intents={item.intents}
-              dateUpdated={item.dateUpdated}
+              dateUpdated={formatTimestamp(item.dateUpdated)}
             />
           );
         })}
