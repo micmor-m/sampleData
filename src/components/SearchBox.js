@@ -11,6 +11,7 @@ const SearchBox = (props) => {
         id="search"
         name="search"
         onChange={(e) => props.handleSearch(e.target.value)}
+        value={props.searchString}
       />
     </section>
   );

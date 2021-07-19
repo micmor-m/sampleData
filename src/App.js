@@ -21,13 +21,11 @@ function App() {
     return item.name.toLowerCase().includes(search.toLowerCase());
   });
 
-  console.log("FilteredData", filteredData);
-
   return (
     <main className="layout">
-      <SearchBox handleSearch={handleSearch} />
+      <SearchBox handleSearch={handleSearch} searchString={search} />
       <section className="container">
-        {sampleData.map((item) => {
+        {filteredData.map((item) => {
           return (
             <CommonCard
               key={item.id}
