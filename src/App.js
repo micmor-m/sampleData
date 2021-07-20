@@ -11,34 +11,16 @@ import { sampleData } from "data/sampleData";
 import formatTimestamp from "./helpers/formatData.js";
 
 function App() {
-  /* Old code
-  const [term, setTerm] = useState("");
-  const [results, setResults] = useState([]);
-
-  useEffect(() => {
-    console.log("Filtering data...");
-
-    const filteredData = sampleData.filter((item) => {
-      return item.name.toLowerCase().includes(term.toLowerCase());
-    });
-
-    setResults([...filteredData]);
-  }, [term]);
-*/
   const [search, setSearch] = useState({
     term: "",
     results: [...sampleData],
   });
-  // console.log("Term", search.term);
+
   const prev = useRef("");
 
   useEffect(() => {
     console.log("Filter data...");
     if (prev.current === "" && search.term === "") return;
-
-    // setSearch((prev) => ({
-    //   ...prev,
-    // }));
 
     prev.current = search.term;
 
@@ -51,12 +33,10 @@ function App() {
       ...search,
       results: filteredData,
     }));
-    // })
   }, [search.term]);
 
   return (
     <main className="layout">
-      {/* <SearchBox onSearch={(term) => setTerm(term)} /> */}
       <SearchBox onSearch={(term) => setSearch({ ...search, term })} />
       <section className="container">
         {search.results.map((item) => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import useDebounce from "../hooks/useDebounce";
 
@@ -6,13 +6,7 @@ import "./SearchBox.scss";
 
 const SearchBox = (props) => {
   const [value, setValue] = useState("");
-  // const term = useDebounce(value, 400);
-  console.log("searchBox");
-  // const onSearch = useCallback(props.onSearch, [term]);
 
-  // useEffect(() => {
-  //   onSearch(term);
-  // }, [term, onSearch]);
   useDebounce(() => props.onSearch(value), 400);
 
   return (
