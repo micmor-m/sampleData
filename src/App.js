@@ -36,9 +36,9 @@ function App() {
     console.log("Filter data...");
     if (prev.current === "" && search.term === "") return;
 
-    setSearch((prev) => ({
-      ...prev,
-    }));
+    // setSearch((prev) => ({
+    //   ...prev,
+    // }));
 
     prev.current = search.term;
 
