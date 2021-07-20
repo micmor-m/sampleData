@@ -6,6 +6,7 @@ const SearchBox = (props) => {
   return (
     <section className="search-box">
       <input
+        spellCheck="false"
         type="text"
         placeholder="Filter By Name"
         id="search"
