@@ -27,28 +27,29 @@ function App() {
 */
   const [search, setSearch] = useState({
     term: "",
-    results: [],
-    loading: false,
+    results: [...sampleData],
   });
-
+  // console.log("Term", search.term);
   const prev = useRef("");
 
   useEffect(() => {
+    console.log("Filter data...");
     if (prev.current === "" && search.term === "") return;
 
     setSearch((prev) => ({
       ...prev,
-      loading: true,
     }));
 
     prev.current = search.term;
 
     //Filter data array
-    let response;
+    const filteredData = sampleData.filter((item) => {
+      return item.name.toLowerCase().includes(search.term.toLowerCase());
+    });
+
     setSearch((search) => ({
       ...search,
-      results: response.data.results,
-      loading: false,
+      results: filteredData,
     }));
     // })
   }, [search.term]);
@@ -56,7 +57,7 @@ function App() {
   return (
     <main className="layout">
       {/* <SearchBox onSearch={(term) => setTerm(term)} /> */}
-      onSearch={(term) => setSearch({ ...search, term })}
+      <SearchBox onSearch={(term) => setSearch({ ...search, term })} />
       <section className="container">
         {search.results.map((item) => {
           return (
